@@ -8,8 +8,7 @@
   <style>
     body {
       background: #332c0f;
-      color: #e6eabf
-;
+      color: #e6eabf;
       font-family: 'Fira Mono', monospace;
       margin: 0;
       padding: 0;
@@ -24,13 +23,13 @@
       box-shadow: 0 4px 24px #0003;
     }
     h1 {
-      color: #e6eabf
-;
+      color: #e6eabf;
       margin-bottom: 32px;
       font-size: 2em;
       letter-spacing: 2px;
       border-bottom: 2px solid #bcb893;
       padding-bottom: 10px;
+      text-align: center; /* Căn giữa tiêu đề */
     }
     .project {
       margin-bottom: 36px;
@@ -39,32 +38,90 @@
       font-weight: bold;
       font-size: 1.1em;
       color: #bcb893;
+      margin-bottom: 8px; /* Thêm khoảng cách dưới project title */
     }
     .project a {
-      color: #e6eabf
-;
+      color: #e6eabf;
       text-decoration: underline;
     }
     .project a:hover {
       color: #bcb893;
     }
-    .project b {
-      color: #e6eabf
-;
+    .project b { /* Áp dụng cho các thẻ <b> bên trong .project */
+      color: #e6eabf; /* Đổi màu cho đậm hơn, hoặc giữ nguyên #e6eabf */
     }
     .project hr {
       border: none;
       border-top: 1px dashed #bcb893;
-      margin: 18px 0;
+      margin: 24px 0; /* Tăng khoảng cách cho hr */
     }
     .tools {
-      margin-top: 6px;
+      margin-top: 12px; /* Tăng khoảng cách trên tools */
       color: #bcb893;
       font-size: 0.98em;
     }
+    ul {
+      margin: 8px 0 0 0; /* Bỏ lề trái mặc định của ul */
+      padding-left: 18px; /* Thêm padding để thay thế list-style-position */
+      list-style-position: inside; /* Đảm bảo bullet points không bị lệch */
+    }
+    ul li {
+      margin-bottom: 6px; /* Tăng khoảng cách giữa các li */
+      line-height: 1.6;
+    }
+    .summary {
+      font-style: italic;
+      margin-bottom: 10px; /* Tăng khoảng cách dưới summary */
+      color: #bcb893; /* Màu này đã có, giữ nguyên */
+      line-height: 1.5;
+    }
+    .role {
+      font-weight: bold;
+      color: #bcb893; /* Màu này đã có, giữ nguyên */
+      margin-bottom: 8px; /* Thêm khoảng cách dưới role */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) { /* Breakpoint lớn hơn một chút cho tablet */
+      .container {
+        margin: 20px 15px; /* Giảm margin cho container */
+        padding: 24px 18px; /* Giảm padding cho container */
+      }
+      h1 {
+        font-size: 1.7em; /* Giảm font-size h1 */
+        margin-bottom: 24px;
+      }
+      .project-title {
+        font-size: 1.05em;
+      }
+    }
+
     @media (max-width: 600px) {
       .container {
-        padding: 16px 4px;
+        margin: 15px 10px; /* Giảm margin hơn nữa cho mobile */
+        padding: 20px 12px; /* Giảm padding hơn nữa cho mobile */
+        border-radius: 8px; /* Giảm bo góc */
+      }
+      h1 {
+        font-size: 1.5em; /* Giảm font-size h1 cho mobile */
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+      }
+      .project {
+        margin-bottom: 28px;
+      }
+      .project-title {
+        font-size: 1em; /* Giảm font-size project title */
+        line-height: 1.4;
+      }
+      .summary, .role, b, .tools, ul li {
+        font-size: 0.95em; /* Giảm nhẹ font-size cho các text khác */
+      }
+      ul {
+        padding-left: 15px;
+      }
+      .project hr {
+        margin: 20px 0;
       }
     }
   </style>
