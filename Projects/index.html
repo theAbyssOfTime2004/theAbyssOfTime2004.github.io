@@ -3,210 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Mai Đăng">
   <title>Projects | TheAbyssOfTime</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: #332c0f;
-      color: #e6eabf;
-      font-family: 'Fira Mono', monospace;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #474329;
-      border-radius: 12px;
-      padding: 36px 28px;
-      box-shadow: 0 4px 24px #0003;
-    }
-    h1 {
-      color: #e6eabf;
-      margin-bottom: 32px;
-      font-size: 2em;
-      letter-spacing: 2px;
-      border-bottom: 2px solid #bcb893;
-      padding-bottom: 10px;
-      text-align: center; /* Căn giữa tiêu đề */
-    }
-    .project {
-      margin-bottom: 36px;
-    }
-    .project-title {
-      font-weight: bold;
-      font-size: 1.1em;
-      color: #bcb893;
-      margin-bottom: 8px; /* Thêm khoảng cách dưới project title */
-    }
-    .project a {
-      color: #e6eabf;
-      text-decoration: underline;
-    }
-    .project a:hover {
-      color: #bcb893;
-    }
-    .project b { /* Áp dụng cho các thẻ <b> bên trong .project */
-      color: #e6eabf; /* Đổi màu cho đậm hơn, hoặc giữ nguyên #e6eabf */
-    }
-    .project hr {
-      border: none;
-      border-top: 1px dashed #bcb893;
-      margin: 24px 0; /* Tăng khoảng cách cho hr */
-    }
-    .tools {
-      margin-top: 12px; /* Tăng khoảng cách trên tools */
-      color: #bcb893;
-      font-size: 0.98em;
-    }
-    ul {
-      margin: 8px 0 0 0; /* Bỏ lề trái mặc định của ul */
-      padding-left: 18px; /* Thêm padding để thay thế list-style-position */
-      list-style-position: inside; /* Đảm bảo bullet points không bị lệch */
-    }
-    ul li {
-      margin-bottom: 6px; /* Tăng khoảng cách giữa các li */
-      line-height: 1.6;
-    }
-    .summary {
-      font-style: italic;
-      margin-bottom: 10px; /* Tăng khoảng cách dưới summary */
-      color: #bcb893; /* Màu này đã có, giữ nguyên */
-      line-height: 1.5;
-    }
-    .role {
-      font-weight: bold;
-      color: #bcb893; /* Màu này đã có, giữ nguyên */
-      margin-bottom: 8px; /* Thêm khoảng cách dưới role */
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) { /* Breakpoint lớn hơn một chút cho tablet */
-      .container {
-        margin: 20px 15px; /* Giảm margin cho container */
-        padding: 24px 18px; /* Giảm padding cho container */
-      }
-      h1 {
-        font-size: 1.7em; /* Giảm font-size h1 */
-        margin-bottom: 24px;
-      }
-      .project-title {
-        font-size: 1.05em;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 15px 10px; /* Giảm margin hơn nữa cho mobile */
-        padding: 20px 12px; /* Giảm padding hơn nữa cho mobile */
-        border-radius: 8px; /* Giảm bo góc */
-      }
-      h1 {
-        font-size: 1.5em; /* Giảm font-size h1 cho mobile */
-        margin-bottom: 20px;
-        letter-spacing: 1px;
-      }
-      .project {
-        margin-bottom: 28px;
-      }
-      .project-title {
-        font-size: 1em; /* Giảm font-size project title */
-        line-height: 1.4;
-      }
-      .summary, .role, b, .tools, ul li {
-        font-size: 0.95em; /* Giảm nhẹ font-size cho các text khác */
-      }
-      ul {
-        padding-left: 15px;
-      }
-      .project hr {
-        margin: 20px 0;
-      }
-    }
-  </style>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>PROJECTS</h1>
+  <div class="page-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <h1><a href="../index.html">TheAbyssOfTime</a></h1>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="index.html" class="nav-link active">Projects</a>
+        <a href="../Blog/index.html" class="nav-link">Blog</a>
+      </nav>
+      
+      <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+        <span class="theme-icon">🌙</span>
+        <span>Dark</span>
+      </button>
+    </aside>
 
-    <div class="project">
-      <div class="project-title">
-        EEG Data Classification For Mental State Detection | Python, Machine Learning, Deep Learning, Time series - 4 members
-        <a href="#">[GitHub]</a>
-      </div>
-      <div class="summary">
-        Developed a machine learning pipeline to classify EEG signals for mental state detection in drivers.
-      </div>
-      <div class="role">Role: Pipeline Designer, Data Scientist</div>
-      <b>Contributions:</b>
-      <ul>
-        <li>Designed and implemented data preprocessing (ICA, feature engineering).</li>
-        <li>Built and compared models (CNN, SVM, XGBoost).</li>
-        <li><u>Achieved 86.78% accuracy</u> on test data.</li>
-        <li>Explored real-world applications for brain-computer interfaces.</li>
-      </ul>
-      <div class="tools">
-        <b>Tools:</b>
-        <ul>
-          <li>Python, Scikit-learn, TensorFlow/Keras, XGBoost</li>
-        </ul>
-        <b>Dataset:</b>
-        <ul>
-          <li>25 hours of EEG data from 5 participants (Kaggle)</li>
-        </ul>
-      </div>
-      <hr>
-    </div>
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- AI / GENERATIVE Section -->
+      <section class="section">
+        <h2 class="section-header-jl">AI / GENERATIVE :</h2>
+        <div class="content-block">
+          <ul class="jl-list">
+            <li>
+              <strong>Latent Manifold Detector</strong> — 
+              Training-free AI-generated image detector using VAE reconstruction error gap.
+              Based on ReGap paper — computes Δe between original and structurally edited images 
+              (inpainting, semantic edits). SDXL inpaint pipeline, MSE/LPIPS metrics. 
+              Streamlit UI with heatmap visualization.
+              <a href="https://github.com/theAbyssOfTime2004/Latent_manifold" target="_blank">[GitHub]</a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <div class="project">
-      <div class="project-title">
-        Document-Based FAQ System with LLMs | Gemini 2.0, LangChain, Embedding, Vector Store - 3 members
-        <a href="#">[GitHub]</a>
-      </div>
-      <div class="summary">
-        Built and deployed a chatbot using RAG and LLMs to answer FAQs from web-crawled documents.
-      </div>
-      <div class="role">Role: Backend Developer, LLM Integrator</div>
-      <b>Contributions:</b>
-      <ul>
-        <li>Developed a chatbot using the <b>Retrieval-Augmented Generation (RAG)</b> framework.</li>
-        <li>Utilized <b>LangChain</b> for logic flow and Google Gemini for language understanding.</li>
-        <li>Integrated OpenGraph.io API for site data extraction.</li>
-        <li>Delivered the solution via an interactive Streamlit web app.</li>
-      </ul>
-      <div class="tools">
-        <b>Tools:</b>
-        <ul>
-          <li>Python, <a href="#">LangChain</a>, Google Gemini API, <a href="#">OpenGraph.io</a>, <a href="#">Streamlit</a></li>
-        </ul>
-      </div>
-      <hr>
-    </div>
+      <!-- RAG / LLM Section -->
+      <section class="section">
+        <h2 class="section-header-jl">RAG / LLM :</h2>
+        <div class="content-block">
+          <ul class="jl-list">
+            <li>
+              <strong>Multi-Modal AI Chat</strong> — 
+              FastAPI backend supporting 3 modes: text chat, image analysis (GPT-4o-mini vision), 
+              and CSV data analysis via LlamaIndex PandasQueryEngine.
+              Redis for conversation persistence. Natural language → Pandas operations.
+              Handles GitHub blob→raw URL conversion, file validation, error handling.
+              <a href="https://github.com/theAbyssOfTime2004/AI_Chat_Application" target="_blank">[GitHub]</a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <div class="project">
-      <div class="project-title">
-        Sentiment Analysis Pipeline & API | Python, Transformers, Flask, Docker - Solo project
-        <a href="#">[GitHub]</a>
-      </div>
-      <div class="summary">
-        Built a scalable sentiment analysis system and API using fine-tuned Transformer models.
-      </div>
-      <div class="role">Role: Full-stack Developer</div>
-      <b>Contributions:</b>
-      <ul>
-        <li>Fine-tuned Transformer models (BERT, XLNet) on custom datasets (IMDb).</li>
-        <li>Designed a modular pipeline for data processing, training, and evaluation.</li>
-        <li>Deployed a Flask web app for real-time predictions with confidence scores.</li>
-        <li>Containerized the solution with Docker and Gunicorn for scalable deployment.</li>
-      </ul>
-      <div class="tools">
-        <b>Tools:</b>
-        <ul>
-          <li>Python, Flask, Hugging Face Transformers, PyTorch, Docker, Gunicorn, scikit-learn, NumPy</li>
-        </ul>
-      </div>
-    </div>
+      <!-- ML / DATA Section -->
+      <section class="section">
+        <h2 class="section-header-jl">ML / DATA :</h2>
+        <div class="content-block">
+          <ul class="jl-list">
+            <li>
+              <strong>EEG Mental State Classification</strong> — 
+              ML pipeline for classifying EEG signals to detect driver mental states. 
+              CNN, SVM, XGBoost comparison. <em>86.78% accuracy</em>. 
+              <a href="#">[GitHub]</a>
+            </li>
+            <li>
+              <strong>Sentiment Analysis Pipeline</strong> — 
+              Fine-tuned BERT and XLNet on IMDb. Flask API + Docker deployment. 
+              Real-time predictions with confidence scores. 
+              <a href="#">[GitHub]</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- OTHER Section -->
+      <section class="section">
+        <h2 class="section-header-jl">OTHER :</h2>
+        <div class="content-block">
+          <ul class="jl-list">
+            <li>
+              <strong>This portfolio</strong> — 
+              You're looking at it. Minimalist, monospace, earth tones.
+            </li>
+            <li>
+              Many smaller projects didn't make it here — 
+              check <a href="https://github.com/theAbyssOfTime2004" target="_blank">GitHub</a> for more.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- STACK Section -->
+      <section class="section">
+        <h2 class="section-header-jl">COMMON STACK :</h2>
+        <div class="content-block">
+          <p class="stack-text">
+            Python, PyTorch, Diffusers, LlamaIndex, FastAPI, Streamlit, OpenAI API, Redis, Docker, Git
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer-minimal">
+        <p>© 2025 TheAbyssOfTime</p>
+      </footer>
+    </main>
   </div>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
 </body>
 </html>
