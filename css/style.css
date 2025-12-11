@@ -42,29 +42,20 @@ button {
    -------------------------------------------- */
 
 :root {
-    /* Dark Theme Colors - Original Earth Tones */
-    --color-bg: #332c0f;              /* Embered Earth */
-    --color-bg-secondary: #474329;    /* Forest Canopy */
-    --color-bg-tertiary: #5a5435;     /* Darker accent */
-    --color-border: #6b6347;
-    --color-text: #e6eabf;            /* Mossy Green */
-    --color-text-secondary: #bcb893;  /* Pale Jade */
-    --color-text-muted: #9a9473;
-    --color-accent: #e6eabf;          /* Mossy Green as accent */
-    --color-accent-hover: #f0f4d0;
+    /* Dark Theme Colors - Dark Purple Theme */
+    --color-bg: #30253E;              /* Dark Purple */
+    --color-bg-secondary: #3d2f4f;   /* Slightly lighter purple */
+    --color-bg-tertiary: #4a385f;     /* Even lighter purple */
+    --color-border: #5a4a6f;
+    --color-text: #FAF9F6;            /* Off-white/ivory for normal text */
+    --color-text-secondary: #e8e6e0;  /* Slightly darker ivory */
+    --color-text-muted: #c8c6c0;
+    --color-accent: #C3C88C;          /* Yellow-green for headings */
+    --color-accent-hover: #d4d9a0;
     --color-accent-green: #a8c686;
     --color-accent-purple: #c9b8e0;
     --color-accent-orange: #e0c088;
-    --color-overlay: rgba(51, 44, 15, 0.9);
-    
-    /* Light Theme Colors */
-    --light-bg: #bcb893;              /* Pale Jade */
-    --light-bg-secondary: #d4cfb8;
-    --light-bg-tertiary: #e8e4d5;
-    --light-border: #9a9473;
-    --light-text: #332c0f;            /* Embered Earth */
-    --light-text-secondary: #5a5435;
-    --light-accent: #474329;
+    --color-overlay: rgba(48, 37, 62, 0.9);
     
     /* Typography */
     --font-mono: 'Fira Mono', 'SF Mono', 'Monaco', 'Consolas', monospace;
@@ -98,17 +89,6 @@ button {
     --transition-fast: 0.15s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
-}
-
-/* Light Theme */
-body.light-theme {
-    --color-bg: var(--light-bg);
-    --color-bg-secondary: var(--light-bg-secondary);
-    --color-bg-tertiary: var(--light-bg-tertiary);
-    --color-border: var(--light-border);
-    --color-text: var(--light-text);
-    --color-text-secondary: var(--light-text-secondary);
-    --color-accent: var(--light-accent);
 }
 
 /* --------------------------------------------
@@ -341,7 +321,7 @@ body {
 .sidebar-logo h1 {
     font-size: var(--fs-xl);
     font-weight: 700;
-    color: var(--color-text);
+    color: var(--color-accent); /* #C3C88C for headings */
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
@@ -357,7 +337,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
-    margin-bottom: auto;
 }
 
 .nav-link {
@@ -385,26 +364,6 @@ body {
 
 .nav-link.active::before {
     color: var(--color-accent);
-}
-
-/* Theme Toggle */
-.theme-toggle {
-    padding: var(--spacing-sm);
-    background: var(--color-bg-tertiary);
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    color: var(--color-text-secondary);
-    font-size: var(--fs-sm);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    transition: all var(--transition-fast);
-    cursor: pointer;
-}
-
-.theme-toggle:hover {
-    border-color: var(--color-accent);
-    color: var(--color-text);
 }
 
 /* Main Content */
@@ -441,6 +400,34 @@ body {
 .section-title::before {
     content: '# ';
     color: var(--color-accent);
+}
+
+/* Section Header JL (Job Listing Style) */
+.section-header-jl {
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    color: var(--color-accent); /* #C3C88C for headings */
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-accent); /* #C3C88C for all headings */
+    font-weight: 600;
+}
+
+h1 {
+    font-size: var(--fs-3xl);
+}
+
+h2 {
+    font-size: var(--fs-2xl);
+}
+
+h3 {
+    font-size: var(--fs-xl);
 }
 
 /* --------------------------------------------
@@ -485,7 +472,7 @@ body {
     font-size: var(--fs-2xl);
     font-weight: 700;
     margin-bottom: var(--spacing-xs);
-    color: var(--color-text);
+    color: var(--color-accent); /* #C3C88C for headings */
 }
 
 .profile-title {
@@ -657,7 +644,7 @@ body {
 .project-title {
     font-size: var(--fs-xl);
     font-weight: 600;
-    color: var(--color-text);
+    color: var(--color-accent); /* #C3C88C for headings */
     margin-bottom: var(--spacing-sm);
     display: flex;
     align-items: center;
@@ -703,7 +690,7 @@ body {
 .project-section-title {
     font-size: var(--fs-sm);
     font-weight: 600;
-    color: var(--color-text);
+    color: var(--color-accent); /* #C3C88C for headings */
     margin-bottom: var(--spacing-sm);
     display: flex;
     align-items: center;
@@ -931,10 +918,6 @@ body {
         display: none;
     }
     
-    .theme-toggle {
-        padding: var(--spacing-xs) var(--spacing-sm);
-    }
-    
     .main-content {
         margin-left: 0;
         max-width: 100%;
@@ -990,7 +973,7 @@ body {
 .section-title-minimal {
     font-size: var(--fs-xl);
     font-weight: 500;
-    color: var(--color-text);
+    color: var(--color-accent); /* #C3C88C for headings */
     margin-bottom: var(--spacing-lg);
     padding-bottom: var(--spacing-sm);
     border-bottom: 1px solid var(--color-border);
@@ -1096,7 +1079,7 @@ body {
 .project-minimal h3 {
     font-size: var(--fs-lg);
     font-weight: 500;
-    color: var(--color-text);
+    color: var(--color-accent); /* #C3C88C for headings */
     margin: 0;
 }
 
@@ -1342,8 +1325,6 @@ body {
     font-size: var(--fs-xs);
     color: var(--color-text-muted);
     line-height: 1.4;
-}
-    margin-bottom: 2px;
 }
 
 .spotify-artist {

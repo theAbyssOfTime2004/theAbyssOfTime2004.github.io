@@ -7,44 +7,7 @@
     'use strict';
 
     /* --------------------------------------------
-       1. THEME TOGGLE
-       -------------------------------------------- */
-
-    function initThemeToggle() {
-        const themeToggle = document.getElementById('theme-toggle');
-        if (!themeToggle) return;
-
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        
-        function updateThemeIcon(isDark) {
-            themeToggle.innerHTML = isDark 
-                ? '<span class="theme-icon">🌙</span><span>Dark</span>' 
-                : '<span class="theme-icon">☀️</span><span>Light</span>';
-        }
-
-        // Get current theme
-        let currentTheme = localStorage.getItem('theme') || 
-            (prefersDarkScheme.matches ? 'dark' : 'light');
-
-        // Apply theme
-        if (currentTheme === 'light') {
-            document.body.classList.add('light-theme');
-            updateThemeIcon(false);
-        } else {
-            document.body.classList.remove('light-theme');
-            updateThemeIcon(true);
-        }
-
-        // Toggle handler
-        themeToggle.addEventListener('click', () => {
-            const isNowLight = document.body.classList.toggle('light-theme');
-            updateThemeIcon(!isNowLight);
-            localStorage.setItem('theme', isNowLight ? 'light' : 'dark');
-        });
-    }
-
-    /* --------------------------------------------
-       2. CODE RAIN EFFECT (Splash Page)
+       1. CODE RAIN EFFECT (Splash Page)
        -------------------------------------------- */
 
     function initCodeRain() {
@@ -313,14 +276,7 @@
        -------------------------------------------- */
 
     document.addEventListener('DOMContentLoaded', function() {
-        // Apply saved theme immediately
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            document.body.classList.add('light-theme');
-        }
-        
         // Initialize all modules
-        initThemeToggle();
         initCodeRain();
         initTypingEffect();
         initPageTransitions();
